@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Portal</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ url_for('static', filename='bg1.jpeg') }}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        h2 {
+            text-align: center;
+            color: #ede8e8;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #e97509;
+            text-decoration: none;
+            background-color: yellow;
+            padding: 5px 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Check Your Result</h2>
+    <form action="/result" method="POST">
+        Roll Number: <input type="text" name="roll_no" required><br><br>
+        <button type="submit">Get Result</button>
+    </form>
+    <br>
+    <a href="/admin">Admin Login</a>
+</body>
+</html>

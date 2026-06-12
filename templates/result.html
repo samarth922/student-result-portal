@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ url_for('static', filename='bg3.jpeg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        h2 {
+            text-align: center;
+            color: #e4e2e2;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        a {
+            text-align: center;
+            display: inline-block;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Result</h2>
+    {% if student %}
+        <p><b>Roll No:</b> {{ student[0] }}</p>
+        <p><b>Name:</b> {{ student[1] }}</p>
+        <p><b>Marks:</b> {{ student[2] }}</p>
+    {% else %}
+        <p>Student not found!</p>
+    {% endif %}
+    <br>
+    <a href="/">Check Another</a>
+</body>
+</html>
