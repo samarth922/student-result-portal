@@ -11,7 +11,7 @@ def init_db():
                   name TEXT, 
                   marks INTEGER)''')
     conn.close()
-
+init_db()
 @app.route('/')
 def home():
     return render_template('index.html')
